@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        html,body {
+            font: normal 13pt Arial;
+            background: cadetblue;
+            color: black;
+            display: flex; 
+                      
+        }
+
+        #objeto{
+            width: 400px;
+            height: 100px; 
+            background-color: yellow;
+             padding: 10px;
+             margin: 5px;
+             border-style: solid ;
+             border-radius: 10px;
+             text-align: center;
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             left: 0;
+             top: 0;
+             margin: auto;
+            
+
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+<div id="objeto">
+    <h1>Nacionalidade</h1>
+    Escreva seu Pais : <input type="text" name="txtp" id="txtp">
+    <input type="button" value="valor" onclick="resposta()">
+    
+    <div id="res"></div>
+</div>
+
+<script>
+    function resposta() {
+        var txtp1 = window.document.getElementById("txtp")
+        
+        var res = window.document.getElementById("res")
+       
+        var vel = (txtp1.value)
+        res.innerHTML =`seu pais é ${vel}`
+        
+        if (vel == "brasil") {
+            res.innerHTML=`voce é brasileiro!`
+        }
+        else {
+            res.innerHTML=`voce é extrangeiro!`
+        } 
+    }
+</script>
+</body>
+</html>
